@@ -18,29 +18,53 @@
     <a href="champions.html">Чемпионы</a>
   </nav>
   <div class="container animate-on-scroll">
-    <h2>Чемпионы турниров</h2>
+    <h2>Турниры</h2>
 
     <div class="champion-card animate-on-scroll">
-      <h3>Любительский турнир – зима 2024</h3>
+      <h3 onclick="toggleDetails(this)">Любительский турнир – зима 2024</h3>
       <p><strong>Победитель:</strong> Renat</p>
+      <div class="details" style="display:none">
+        <p><strong>Где:</strong> Атырау</p>
+        <p><strong>Участники:</strong> Renat, Malik, Alik</p>
+        <p><strong>Пики:</strong> Renat (Medusa), Malik (Sinbad), Alik (Dracula)</p>
+        <p><strong>Финал:</strong> Renat vs Malik — Победа Renat</p>
+      </div>
       <img src="renat1.jpg" alt="Фото Renat">
     </div>
 
-    <div class="champion-card">
-      <h3>Мастер-лига – зима 2024</h3>
+    <div class="champion-card animate-on-scroll">
+      <h3 onclick="toggleDetails(this)">Мастер-лига – зима 2024</h3>
       <p><strong>Победитель:</strong> Renat</p>
+      <div class="details" style="display:none">
+        <p><strong>Где:</strong> Алматы</p>
+        <p><strong>Участники:</strong> Renat, Medet, Dastan</p>
+        <p><strong>Пики:</strong> Renat (Sherlock), Medet (Alice), Dastan (Arthur)</p>
+        <p><strong>Финал:</strong> Renat vs Medet — Победа Renat</p>
+      </div>
       <img src="renat2.jpg" alt="Фото Renat">
     </div>
 
-    <div class="champion-card">
-      <h3>Профессиональный турнир – зима 2024</h3>
+    <div class="champion-card animate-on-scroll">
+      <h3 onclick="toggleDetails(this)">Профессиональный турнир – зима 2024</h3>
       <p><strong>Победитель:</strong> Medet</p>
+      <div class="details" style="display:none">
+        <p><strong>Где:</strong> Астана</p>
+        <p><strong>Участники:</strong> Medet, Rinat, Daniyar</p>
+        <p><strong>Пики:</strong> Medet (Dracula), Rinat (Red), Daniyar (Beowulf)</p>
+        <p><strong>Финал:</strong> Medet vs Rinat — Победа Medet</p>
+      </div>
       <img src="medet1.jpg" alt="Фото Medet">
     </div>
 
-    <div class="champion-card">
-      <h3>Unmatched International – Уральск, май 2025</h3>
+    <div class="champion-card animate-on-scroll">
+      <h3 onclick="toggleDetails(this)">Unmatched International – Уральск, май 2025</h3>
       <p><strong>Победитель:</strong> Medet</p>
+      <div class="details" style="display:none">
+        <p><strong>Где:</strong> Уральск</p>
+        <p><strong>Участники:</strong> Medet, Rinat, Dastan, Malik</p>
+        <p><strong>Пики:</strong> Medet (Bigfoot), Rinat (Medusa), Dastan (Holmes), Malik (Red)</p>
+        <p><strong>Финал:</strong> Medet vs Rinat — Победа Medet</p>
+      </div>
       <img src="medet2.jpg" alt="Фото Medet">
     </div>
   </div>
@@ -49,5 +73,15 @@
     <p>© 2025 Unmatched Kazakhstan. Все права защищены.</p>
   </footer>
   <script src="script.js"></script>
+  <script>
+    function toggleDetails(el) {
+      const block = el.nextElementSibling.nextElementSibling;
+      if (block.style.display === 'none') {
+        block.style.display = 'block';
+      } else {
+        block.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
